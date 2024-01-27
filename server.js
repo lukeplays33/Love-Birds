@@ -15,6 +15,8 @@ const HOST = '0.0.0.0';
 var fs = require('fs');
 var sys = require('sys');
 
+alert();
+
 var app = express();
     app.use(express.logger());
     app.set("view options", {layout: false});
