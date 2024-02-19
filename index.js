@@ -2,7 +2,7 @@ import { net } from "./js/main.js";
 
 function generateResponse(input) {
   alert(input.content)
-  alert(type of input.content)
+  alert(typeof input.content)
     const output = net.run({ type:"greeting", content: encodeText(input.content) });
     console.log(output)
     document.getElementById('response').innerHTML = output;
