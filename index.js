@@ -1,17 +1,16 @@
 import { net } from "./js/main.js";
-import { dictionary } from "./dictionary.js";
 
 function generateResponse(input) {
-  const output = net.run(input);
+    const output = net.run(input);
+    console.log(output)
+    document.getElementById('response').innerHTML = output;
+    // You can use or display the generated response in the UI or perform any other action here
+  }
 
-  const responseId = Object.keys(output)[0];
-  const responseMessage = dictionary.find((message) => message.id === parseInt(responseId));
-  console.log(responseMessage)
-
-  document.getElementById('response').innerHTML = responseMessage;
-  // You can use or display the generated response in the UI or perform any other action here
-}
+  function encodeText(text) {
+    return text.split('').map(char => char.charCodeAt(0) / 255);
+  }
 
 document.getElementById('msg').onchange = function () {
-  generateResponse({ type: 'greeting', content: this.value });
+    generateResponse({ type: 'greeting', content: this.value });
 }
