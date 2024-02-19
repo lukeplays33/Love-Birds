@@ -6,6 +6,6 @@ let trainingData = [
 
 const net = new brain.NeuralNetwork();
 
-net.train(trainingData, { iterations: 1000, errorThresh: 0.01 });
+net.train(trainingData);
 
 export { net }; 
