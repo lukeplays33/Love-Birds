@@ -1,4 +1,4 @@
-import { greetingData } from "./greetings/greetings";
+import { greetingData } from "./greetings/greetings.js";
 
 let trainingData = [
     greetingData
