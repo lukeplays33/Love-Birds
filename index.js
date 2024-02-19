@@ -12,5 +12,6 @@ function generateResponse(input) {
   }
 
 document.getElementById('msg').onchange = function () {
-    generateResponse({ type: 'greeting', content: this.value });
+  let value = this.value;
+    generateResponse({ type: 'greeting', content: value });
 }
