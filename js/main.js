@@ -4,7 +4,7 @@ let trainingData = [
     greetingData
 ];
 
-alert(trainingData)
+console.log(trainingData)
 
 const net = new brain.NeuralNetwork();
 
