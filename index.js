@@ -1,16 +1,17 @@
 import { net } from "./js/main.js";
 
 function generateResponse(input) {
-    const output = net.run(input);
-    console.log(output)
-    document.getElementById('response').innerHTML = output;
-    // You can use or display the generated response in the UI or perform any other action here
-  }
-
-  function encodeText(text) {
-    return text.split('').map(char => char.charCodeAt(0) / 255);
-  }
-
-document.getElementById('msg').onchange = function () {
-    generateResponse({ type: 'greeting', content: this.value });
+  const output = net.run(input);
+  console.log("Chatbot response:", output);
+  // Update UI or perform other actions
 }
+
+function encodeText(text) {
+  return text.split("").map((char) => char.charCodeAt(0) / 255);
+}
+
+document.getElementById("msg").onchange = function () {
+  const userInput = { type: "greeting", content: this.value };
+  const normalizedInput = encodeText(userInput.content); // Normalize user input
+  generateResponse(normalizedInput);
+};

@@ -1,6 +1,13 @@
-let dictionary = [{
-    input: { type: 'greeting', content: 'Hello' },
-    output: { response: 'Hi there!' }
-}];
+function encodeText(text) {
+    return text.split("").map((char) => char.charCodeAt(0) / 255);
+  }
 
-export { dictionary }
+const dictionary = [
+    {
+      input: encodeText("Hello"), // Normalize input
+      output: { response: 1 }, // Example label
+    },
+    // Add more training examples
+  ];
+  
+  export { dictionary };
