@@ -1,7 +1,6 @@
 import { net } from "./js/main.js";
 
 function generateResponse(input) {
-  alert(encodeText(input.content))
     const output = net.run({ type:"greeting", content: encodeText(input.content) });
     console.log(output)
     document.getElementById('response').innerHTML = output;
