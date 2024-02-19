@@ -5,7 +5,7 @@ function encodeText(text) {
 const dictionary = [
     {
       input: encodeText("Hello"), // Normalize input
-      output: { response: 1 }, // Example label
+      output: { response: "Hello" }, // Example label
     },
     // Add more training examples
   ];

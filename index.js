@@ -2,7 +2,7 @@ import { net } from "./js/main.js";
 
 function generateResponse(input) {
   const output = net.run(input);
-  console.log("Chatbot response:", output);
+  console.log("Chatbot response:", output.response);
   // Update UI or perform other actions
 }
 
