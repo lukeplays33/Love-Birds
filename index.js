@@ -1,7 +1,7 @@
 import { net } from "./js/main.js";
 
 function generateResponse(input) {
-    const output = net.run({ type:"greeting", content: encodeText(input) });
+    const output = net.run({ type:"greeting", content: encodeText(input.content) });
     console.log(output)
     document.getElementById('response').innerHTML = output;
     // You can use or display the generated response in the UI or perform any other action here
@@ -12,6 +12,5 @@ function generateResponse(input) {
   }
 
 document.getElementById('msg').onchange = function () {
-  let value = this.value;
-    generateResponse({ type: 'greeting', content: value });
+    generateResponse({ type: 'greeting', content: this.value });
 }
