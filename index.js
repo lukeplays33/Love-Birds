@@ -1,3 +1,5 @@
+import { net } from "./js/main";
+
 function generateResponse(input) {
     const output = net.run(input);
     document.getElementById('response').innerHTML = output;
