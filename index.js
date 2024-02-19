@@ -4,6 +4,6 @@ function generateResponse(input) {
     // You can use or display the generated response in the UI or perform any other action here
   }
 
-document.getElementById('msg').onsubmit = function () {
+document.getElementById('msg').onchange = function () {
     generateResponse({ type: 'greeting', content: this.value });
 }
