@@ -1,13 +1,9 @@
-import { greetingData } from "./greetings/greetings.js";
+import { dictionary } from "./dictionary.js";
 
-let trainingData = [
-    greetingData
-];
-
-console.log(trainingData)
+console.log(dictionary)
 
 const net = new brain.NeuralNetwork();
 
-net.train(trainingData);
+net.train(dictionary);
 
 export { net }; 
